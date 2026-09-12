@@ -7,7 +7,7 @@ public class DiskSeekMain {
 
         SeekContext seekContext = new SeekContext();
 
-        SeekStrategy[] algorithms = {new FCFS(), new SSTF(), new SCAN()};
+        SeekStrategy[] algorithms = {new FCFS(), new SSTF(), new SCAN(), new LOOK()};
 
         for (SeekStrategy algorithm : algorithms) {
             System.out.println(algorithm.getName());
