@@ -8,26 +8,26 @@ public class AirMain2 {
         Thread serverThread = new Thread(server);
         serverThread.start();
 
-        // 2. 리더(Observer) 생성 후 서버에 등록
-        AirPollutionReader2 reader = new AirPollutionReader2();
-        server.addObserver(reader);
+        // 2. 리더(Observer) 1과 2를 생성 후 서버에 등록
+        AirPollutionReader2 reader1 = new AirPollutionReader2(1);
+        server.addObserver(reader1);
+        AirPollutionReader2 reader2 = new AirPollutionReader2(2);
+        server.addObserver(reader2);
 
-        // 3. 메인 스레드는 일정 시간 대기 후 서버 종료 요청
-        try {
-            Thread.sleep(duration * 1000 * 5); // 5번 주기만큼 대기
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        for (int i = 0; i < 5; i++) {
+            if (i == 2) {
+                System.out.println("rm observer1");
+                server.removeObserver(reader1);
+            } else if (i == 4) {
+                System.out.println("register observer1 again");
+                server.addObserver(reader1);
+            }
+            try {
+                Thread.sleep(duration * 1000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-
-        // 4. 미세먼지 농도 변경 스레드 종료
-        server.stopThread();
-
-        try {
-            serverThread.join();
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-
-        System.out.println("Main program terminated.");
+        serverThread.interrupt();
     }
 }

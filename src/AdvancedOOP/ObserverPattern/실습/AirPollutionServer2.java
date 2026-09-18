@@ -5,12 +5,11 @@ import java.util.List;
 
 public class AirPollutionServer2 implements Runnable, AirPollutionServer {
 
-    private int pollution = 50;
-    private boolean stop = false;
-    private int sleepDuration;
-
     // 옵저버들을 관리하는 리스트
     private final List<AirPollutionObserver> observers = new ArrayList<>();
+    private int pollution = 50; // 초기 미세 먼지
+    private boolean stop = false; // 미세 먼저 변경 여부 신호
+    private int sleepDuration;
 
     public AirPollutionServer2(int duration) {
         this.sleepDuration = duration * 1000;
@@ -20,6 +19,12 @@ public class AirPollutionServer2 implements Runnable, AirPollutionServer {
     @Override
     public void addObserver(AirPollutionObserver observer) {
         observers.add(observer);
+    }
+
+    // 옵저버 삭제 메서드
+    @Override
+    public void removeObserver(AirPollutionObserver observer) {
+        observers.remove(observer);
     }
 
     // 상태 변경 시 모든 옵저버에게 알림
@@ -33,14 +38,14 @@ public class AirPollutionServer2 implements Runnable, AirPollutionServer {
     @Override
     public void run() {
         while (!stop) {
-            int plusMinus = RandIntInRange.nextInt(0, 1);
+            int plusMinus = RandIntInRange.nextInt(0, 1); // 증감 표시
             int pollutionDiff = RandIntInRange.nextInt(1, 10);
 
-            if (plusMinus == 1) {
-                pollution += pollutionDiff;
-            } else {
-                pollution -= pollutionDiff;
-                if (pollution < 0) {
+            if (plusMinus == 1) { // 증가
+                pollution += pollutionDiff; // 적용
+            } else { // 감소
+                pollution -= pollutionDiff; // 적용
+                if (pollution < 0) { // 미세먼지 음수 불가능
                     pollution = 0;
                 }
             }
