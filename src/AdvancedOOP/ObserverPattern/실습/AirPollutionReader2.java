@@ -8,8 +8,8 @@ public class AirPollutionReader2 implements AirPollutionObserver {
     }
 
     @Override
-    public void onPollutionChanged(int pollution) {
+    public void onPollutionChanged(Object pollution) {
         // 미세먼지 농도가 갱신될 때마다 자동으로 실행됨
-        System.out.printf("-> Client Reader(%d) Received: pollution = %d\n", num, pollution);
+        System.out.printf("-> Client Reader(%d) Received: pollution = %d\n", num, (int) pollution);
     }
 }

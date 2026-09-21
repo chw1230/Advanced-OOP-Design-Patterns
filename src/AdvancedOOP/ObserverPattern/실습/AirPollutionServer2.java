@@ -29,9 +29,9 @@ public class AirPollutionServer2 implements Runnable, AirPollutionServer {
 
     // 상태 변경 시 모든 옵저버에게 알림
     @Override
-    public void notifyObservers() {
+    public void notifyObservers(Object arg) {
         for (AirPollutionObserver observer : observers) {
-            observer.onPollutionChanged(pollution);
+            observer.onPollutionChanged(arg);
         }
     }
 
@@ -53,7 +53,7 @@ public class AirPollutionServer2 implements Runnable, AirPollutionServer {
             System.out.printf("Server: pollution = %d\n", pollution);
 
             // 값이 바뀔 때마다 옵저버들에게 통보
-            notifyObservers();
+            notifyObservers(pollution);
 
             try {
                 Thread.sleep(sleepDuration);
