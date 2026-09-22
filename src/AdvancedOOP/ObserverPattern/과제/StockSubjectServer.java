@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class StockSubjectssss implements Runnable, StockSubject {
+public class StockSubjectServer implements Runnable, StockSubject {
     private final List<StockObserver> observers = new ArrayList<>();
     private final String name;
     private final Random rand = new Random();
     private int price; // 가격
     private boolean stop = false;
 
-    public StockSubjectssss(String name) {
+    public StockSubjectServer(String name) {
         this.name = name; // 주식 이름
         this.price = rand.nextInt(30, 151); //  가격
     }
