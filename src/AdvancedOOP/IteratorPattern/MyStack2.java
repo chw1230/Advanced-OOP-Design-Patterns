@@ -1,4 +1,4 @@
-package AdvancedOOP.Iterator;
+package AdvancedOOP.IteratorPattern;
 
 import java.util.ArrayList;
 import java.util.Iterator;

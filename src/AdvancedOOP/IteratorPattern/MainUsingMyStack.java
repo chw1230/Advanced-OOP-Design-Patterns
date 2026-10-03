@@ -1,4 +1,4 @@
-package AdvancedOOP.Iterator;
+package AdvancedOOP.IteratorPattern;
 
 public class MainUsingMyStack {
     public static void main(String[] args) {
