@@ -1,4 +1,4 @@
-package AdvancedOOP.AbstractFactoryPattern;
+package AdvancedOOP.AbstractFactoryPattern.컴퓨터생산;
 
 // 실제 제품
 public class ProductBCPU implements AbstractProductCPU {

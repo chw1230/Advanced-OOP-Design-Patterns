@@ -1,4 +1,4 @@
-package AdvancedOOP.AbstractFactoryPattern;
+package AdvancedOOP.AbstractFactoryPattern.컴퓨터생산;
 
 // A사 세트를 만드는 공장
 public class AComputerFactory implements ComputerFactory {

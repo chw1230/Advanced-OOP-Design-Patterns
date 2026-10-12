@@ -1,4 +1,4 @@
-package AdvancedOOP.AbstractFactoryPattern;
+package AdvancedOOP.AbstractFactoryPattern.컴퓨터생산;
 
 public class Client {
     private AbstractProductCPU cpu;

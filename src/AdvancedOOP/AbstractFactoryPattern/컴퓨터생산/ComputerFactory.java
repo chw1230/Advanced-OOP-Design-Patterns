@@ -1,4 +1,4 @@
-package AdvancedOOP.AbstractFactoryPattern;
+package AdvancedOOP.AbstractFactoryPattern.컴퓨터생산;
 
 // 세트 공장의 규격
 public interface ComputerFactory {
