@@ -27,3 +27,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Build / Binary ###
+*.class
+*.jar
+*.db
