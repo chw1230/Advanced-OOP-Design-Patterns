@@ -32,3 +32,6 @@ bin/
 *.class
 *.jar
 *.db
+
+### Course guide ###
+src/AdvancedOOP/실습가이드/
