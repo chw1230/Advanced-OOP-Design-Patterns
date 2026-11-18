@@ -1,5 +1,6 @@
 package AdvancedOOP.JDBC_DAO.DAO.웹사이트;
 
+// DAO를 호출해서 데이터를 받아씀
 public class MainPasswordDAO {
     public static void main(String[] args) {
         final String DB_FILE_PATH = "src/AdvancedOOP/JDBC_DAO/DAO/웹사이트/passwordInfo.db";
@@ -13,9 +14,9 @@ public class MainPasswordDAO {
             // 새로운 정보를 데이터베이스에 추가
             System.out.println("새로운 정보를 데이터베이스에 추가");
             passwordDAO.insert(new PasswordInfo(
-                    "https://www.smu.ac.kr",
-                    "smu",
-                    "abcde"
+                            "https://www.smu.ac.kr",
+                            "smu",
+                            "abcde"
                     )
             );
             passwordDAO.insert(new PasswordInfo(

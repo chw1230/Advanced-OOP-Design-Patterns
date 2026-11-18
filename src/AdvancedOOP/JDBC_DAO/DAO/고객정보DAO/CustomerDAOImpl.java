@@ -8,6 +8,11 @@ import java.util.List;
 // 실제 DB 연결, SQL 실행, 결과 매핑 / DB 관련 코드는 전부 여기에 위치
 public class CustomerDAOImpl implements CustomerDAO {
     private Connection connection;
+    /*
+    Statement vs PreparedStatement
+    보안성과 성능 측면에서 PreparedStatement가 우수함!
+
+     */
 
     public CustomerDAOImpl(Connection connection) {
         this.connection = connection;

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+// 실제 데이터베이스와의 연결을 관리
 public class SQLiteConnector {
     private Connection conn;
 

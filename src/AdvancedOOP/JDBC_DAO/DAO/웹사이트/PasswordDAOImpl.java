@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+// 실제 DB 연결, SQL 실행, 결과 매핑 / DB 관련 코드는 전부 여기에 위치
 public class PasswordDAOImpl implements PasswordDAO {
     private Connection connection;
 

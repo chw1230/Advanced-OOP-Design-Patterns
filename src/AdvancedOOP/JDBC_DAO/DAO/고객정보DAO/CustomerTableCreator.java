@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+// JDBC로 테이블 생성
 public class CustomerTableCreator {
     public static void createNewDatabase(String dbFilePath) {
         final String SQLITE = "jdbc:sqlite:";
@@ -17,7 +18,7 @@ public class CustomerTableCreator {
         try (Connection conn = DriverManager.getConnection(url);
              Statement stmt = conn.createStatement()) {
                 String sql = "DROP TABLE IF EXISTS customers;";
-                stmt.executeUpdate(sql);
+                stmt.executeUpdate(sql); // create, update, delete 등    // 존재하면 삭제하기
                 stmt.executeUpdate(SQLITE_TABLE_CREATE_QUERY);
                 System.out.println("Table created successfully!");
         }

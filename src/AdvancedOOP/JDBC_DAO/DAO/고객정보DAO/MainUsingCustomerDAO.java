@@ -2,6 +2,7 @@ package AdvancedOOP.JDBC_DAO.DAO.고객정보DAO;
 
 import java.util.List;
 
+// DAO를 호출해서 데이터를 받아씀
 public class MainUsingCustomerDAO {
     public static void main(String[] args) {
         final String DB_FILE_PATH = "src/AdvancedOOP/JDBC_DAO/DAO/고객정보DAO/customer.db";
