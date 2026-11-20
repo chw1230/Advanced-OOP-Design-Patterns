@@ -1,7 +1,7 @@
 <html>
 <body>
 <%-- A JSP Comment --%>
-<%@ include file = "H.jsp" %>
+<%@ include file = "H.jsp" %> <%-- include 지시문을 사용해서 끼워넣기 --%>
 <% if (hello.equals("hello")) { %>
     <H1>Hello JSP</H1>
 <% } else { %>

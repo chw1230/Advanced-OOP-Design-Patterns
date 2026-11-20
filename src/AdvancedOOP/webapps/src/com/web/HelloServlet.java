@@ -24,3 +24,11 @@ public class HelloServlet extends HttpServlet {
     }
     public void destroy() { /* do nothing */ }
 }
+
+/*
+javac : 자바 컴파일러 실행 (.java를 .class로 변환)
+-cp "$env:CATALINA_HOME/lib/servlet-api.jar" : 컴파일할 때 참조할 라이브러리
+-d hello/WEB-INF/classes : 컴파일 결과를 저장할 기준 폴더
+-s src : 자동 생성 소스(.java)를 저장할 폴더
+src/com/web/HelloServlet.java : 컴파일할 원본 소스 (입력에 해당)
+*/

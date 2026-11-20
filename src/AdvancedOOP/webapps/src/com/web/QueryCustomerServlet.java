@@ -15,8 +15,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+// 서블릿 구현
 @WebServlet("/QueryCustomer")
 public class QueryCustomerServlet extends HttpServlet {
+
+    // DAO를 호출하여 고객 정보를 출력
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

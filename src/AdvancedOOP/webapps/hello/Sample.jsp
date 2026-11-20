@@ -24,6 +24,7 @@ pageEncoding="UTF-8" %>
 <br>
 <% out.print("application server: " + application.getServerInfo()); %>
 <br>
-</body> 
 </body>
 </html>
+
+<%-- JSP 내장 객체를 사용한 예제 --%>
