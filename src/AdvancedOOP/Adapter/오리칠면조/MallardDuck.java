@@ -1,4 +1,4 @@
-package AdvancedOOP.Adapter;
+package AdvancedOOP.Adapter.오리칠면조;
 
 public class MallardDuck implements Duck {
     public void quack() { System.out.println("Quack"); }

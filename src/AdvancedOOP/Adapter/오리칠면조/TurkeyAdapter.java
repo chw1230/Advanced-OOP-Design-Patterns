@@ -1,4 +1,4 @@
-package AdvancedOOP.Adapter;
+package AdvancedOOP.Adapter.오리칠면조;
 
 public class TurkeyAdapter implements Duck { // 1. 겉모습은 Duck ( target )
     Turkey turkey; // 2. Adaptee(Turkey)를 필드로 보관 - 품고 있음
