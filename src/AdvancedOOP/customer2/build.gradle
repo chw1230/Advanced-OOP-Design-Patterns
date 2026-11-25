@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '4.0.1' // 최신 버전 확인 필요
+    id 'io.spring.dependency-management' version '1.1.7' //이전 1.1.0
+}
+
+group = 'com.web.example'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17' // 또는 JavaVersion.VERSION_17 
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // JDBC SQLite 드라이버 추가
+    implementation group: 'org.xerial', name:'sqlite-jdbc', version: '3.51.1.0' 
+}
+
+// main함수 하나를 지정
+springBoot {
+    mainClass = 'com.web.example.AppMain'
+}
