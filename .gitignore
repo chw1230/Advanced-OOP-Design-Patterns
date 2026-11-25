@@ -38,3 +38,8 @@ src/AdvancedOOP/실습가이드/
 
 .idea/
 *.iml
+
+### Gradle ###
+.gradle/
+build/
+!**/gradle/wrapper/gradle-wrapper.jar
