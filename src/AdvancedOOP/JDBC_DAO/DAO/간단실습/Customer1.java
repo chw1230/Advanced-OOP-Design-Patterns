@@ -1,6 +1,6 @@
 package AdvancedOOP.JDBC_DAO.DAO.간단실습;
 
-// DB의 한 행을 담는 Java 객체
+// Data - DB의 한 행을 담는 Java 객체
 public class Customer1 {
     private int id;
     private String name;
