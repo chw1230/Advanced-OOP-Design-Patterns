@@ -23,4 +23,6 @@ public class MRO {
         System.out.println("실행 결과를 전송!");
     }
 
+    // 요청 시점 ( addCommand )과 실행 시점 ( executeAllCommands )이 분리되어 실행 시점을 유연하게 관리
+
 }

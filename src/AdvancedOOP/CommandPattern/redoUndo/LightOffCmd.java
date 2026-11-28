@@ -1,5 +1,6 @@
 package AdvancedOOP.CommandPattern.redoUndo;
 
+// Concrete Command : Command를 구현한 클래스
 public class LightOffCmd implements Command {
     private Light light;
 
@@ -15,5 +16,5 @@ public class LightOffCmd implements Command {
     @Override
     public void undo() {
         light.on();
-    }
+    } // 본 목적의 반대로
 }

@@ -1,5 +1,6 @@
 package AdvancedOOP.CommandPattern.IoT버튼;
 
+// ConcreteCommand
 public class TurnOnTvCmd implements Command {
     private Tv tv;
 

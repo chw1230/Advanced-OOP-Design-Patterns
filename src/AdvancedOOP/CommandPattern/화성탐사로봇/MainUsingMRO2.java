@@ -10,10 +10,12 @@ public class MainUsingMRO2 {
         Command transmitPictureCmd = new TransmitPictureCommand(rover);
         Command undoMoveCmd = new UndoMoveCommand(rover);
         Command macroCmd = new MacroRoverCommand(rover, moveCmd, collectSampleCmd, takePictureCmd, transmitPictureCmd);
+
         System.out.println("Move와 Undo 실행");
         mro.addCommand(moveCmd);
         mro.addCommand(undoMoveCmd);
         mro.executeAllCommands();
+
         System.out.println("\n매크로 명령 실행");
         mro.addCommand(macroCmd);
         mro.executeAllCommands();

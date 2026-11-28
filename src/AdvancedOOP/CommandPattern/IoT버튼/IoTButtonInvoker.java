@@ -1,5 +1,6 @@
 package AdvancedOOP.CommandPattern.IoT버튼;
 
+// Invoker
 public class IoTButtonInvoker {
     private Command clickCmd;
     private Command doubleCmd;

@@ -1,5 +1,6 @@
 package AdvancedOOP.CommandPattern.IoT버튼;
 
+// ConcreteCommand
 public class TurnOffLightCmd implements Command {
     private Light light;
 
